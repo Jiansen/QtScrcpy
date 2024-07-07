@@ -46,7 +46,7 @@ echo begin cmake build
 echo ---------------------------------------------------------------
 
 # 删除输出目录
-output_path=$script_path../../output
+output_path=$script_path/../../output
 if [ -d "$output_path" ]; then
     rm -rf $output_path
 fi
@@ -70,6 +70,8 @@ if [ $? -ne 0 ] ;then
     echo "cmake build failed"
     exit 1
 fi
+
+mv $output_path/x64/$build_mode/QtScrcpy.app $output_path/x64/$build_mode/安卓云控小助手.app
 
 echo
 echo

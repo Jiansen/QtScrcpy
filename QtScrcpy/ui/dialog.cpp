@@ -37,6 +37,12 @@ Dialog::Dialog(QWidget *parent) : QWidget(parent), ui(new Ui::Widget)
 
     updateBootConfig(true);
 
+    // disable and hide ui->useSingleModeCheck
+    ui->useSingleModeCheck->hide();
+    ui->useSingleModeCheck->setChecked(true);
+
+
+
     on_useSingleModeCheck_clicked();
     on_updateDevice_clicked();
 
